@@ -107,7 +107,7 @@ export default function Home() {
             >
               <div className="relative w-5 h-5  overflow-hidden ">
                 <Image
-                  src="/telegram.svg"
+                  src="/Telegram.svg"
                   target="_blank"
                   alt="Link 2"
                   fill
@@ -122,7 +122,7 @@ export default function Home() {
             >
               <div className="relative w-5 h-5  overflow-hidden ">
                 <Image
-                  src="/dexscreener.svg"
+                  src="/Dexscreener.svg"
                   alt="Link 3"
                   fill
                   className="object-cover"
