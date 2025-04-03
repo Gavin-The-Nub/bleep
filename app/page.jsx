@@ -1,12 +1,12 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import Marquee from "react-fast-marquee";
 import { SpaceBackground } from "@/components/space-background";
 import { BentoGrid } from "@/components/bento-grid";
 import { ChevronDown } from "lucide-react";
 import { useRef } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import Marquee from "react-fast-marquee";
 
 // Sample meme data - replace with your actual memes
 const memeItems = [

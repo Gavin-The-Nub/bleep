@@ -1,12 +1,19 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const SpaceBackground = () => {
   const canvasRef = useRef(null);
-  const astronautRef = useRef(new Image());
+  const astronautRef = useRef(null);
+  const [isClient, setIsClient] = useState(false); // State to track client-side rendering
 
   useEffect(() => {
+    setIsClient(true); // Set to true after the component mounts
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return; // Ensure this runs only on the client side
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -23,10 +30,10 @@ export const SpaceBackground = () => {
 
     window.addEventListener("resize", setCanvasSize);
 
-    // Load astronaut image
-    const astronaut = astronautRef.current;
+    // Load astronaut image only on the client side
+    const astronaut = new Image();
     astronaut.crossOrigin = "anonymous";
-    astronaut.src = "/logo.png"; // Make sure this image is in your public folder
+    astronaut.src = "/logo.png"; // Ensure this image is in your public folder
 
     const isMobile = window.innerWidth < 768;
 
@@ -166,7 +173,7 @@ export const SpaceBackground = () => {
       window.removeEventListener("resize", setCanvasSize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isClient]); // Depend on isClient to ensure it runs on the client side
 
   return <canvas ref={canvasRef} className="w-full h-full" />;
 };
