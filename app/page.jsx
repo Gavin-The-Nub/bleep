@@ -49,10 +49,6 @@ const memeItems = [
   { image: "/g18.jpg" },
   { image: "/g21.jpg" },
 ];
-export const metadata = {
-  title: "Bleep",
-  description: "Bleep Bleep Bleep",
-};
 
 export default function Home() {
   const bentoSectionRef = useRef(null);
