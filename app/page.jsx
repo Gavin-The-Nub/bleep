@@ -48,6 +48,10 @@ const memeItems = [
   { image: "/g36.jpg" },
   { image: "/g18.jpg" },
   { image: "/g21.jpg" },
+  { image: "/g37.jpg" },
+  { image: "/g38.jpg" },
+  { image: "/g39.jpg" },
+  { image: "/g25.jpg" },
 ];
 
 export default function Home() {
