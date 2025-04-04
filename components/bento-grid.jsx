@@ -39,7 +39,9 @@ export function BentoItem({
               <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-xs text-white">
                 {uploadedBy.charAt(0)}
               </div>
-              <span className="text-white text-sm">made by {uploadedBy}</span>
+              <a href="https://iandev.xyz" target="_blank">
+                <span className="text-white text-sm">made by {uploadedBy}</span>
+              </a>
             </div>
 
             {/* Download button */}
